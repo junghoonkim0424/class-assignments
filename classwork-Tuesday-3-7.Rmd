@@ -1,0 +1,20 @@
+---
+title: "classwork-Mar-7"
+output: html_document
+---
+
+```{r}
+library(paleobioDB)  #install.packages("paleobioDB")
+library(paleotree)   #install.packages("paleotree")
+data(graphtPBDB)
+head(graphtOccPBDB)
+
+occSpeci
+
+plotOccData(occSpecies,groupLabel = "Species")
+#convert occurrence data to "timelist" format
+graphTimeSpecies <- occData2timeList(occList=occSpecies)
+#plot diversity through time
+taxicDivDisc(graphTimeSpecies)
+
+```
